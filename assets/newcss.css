@@ -276,11 +276,12 @@ img {
 }
 
 .home__social-icon {
-  font-size: 1.05rem;
+  font-size: 1.9rem;
   color: var(--first-color);
 }
 .home__social-icon:hover {
   color: var(--first-color-lighter);
+  
 }
 
 .home__blob {
@@ -439,7 +440,7 @@ img {
 .skills-title {
   font-size: 2.5rem;
   font-weight: 700;
-  
+  color: black;
   margin-bottom: 40px;
 }
 
@@ -855,11 +856,16 @@ img {
   .home__content {
     grid-template-columns: 0.25fr 3fr;
   }
+  
+  .home__social {
+    transform: translateX(-6rem);
+    font-size: 22px;
+  }
 
   .home__blob {
     width: 180px;
   }
-
+  
   .skill-card img {
     width: 35px;
     height: 35px;
@@ -889,33 +895,6 @@ img {
   .project__img {
     width: 200px;
   }
-  .qualification__data {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-    text-align: center;
-  }
-
-  .qualification__data > div:nth-child(2) {
-    justify-self: center;
-  }
-
-  .qualification__rounder,
-  .qualification__line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .qualification__line {
-    transform: none;
-    height: 40px;
-  }
-
-  .qualification__title,
-  .qualification__subtitle,
-  .qualification__calender {
-    text-align: center;
-  }
-
 }
 
 /* For medium Devices */
@@ -927,7 +906,10 @@ img {
   .home__data {
     grid-column: initial;
   }
-
+  .home__social {
+    transform: translateX(-6rem); 
+    font-size: 22px;
+  }
   .home__img {
     order: 1;
     justify-self: center;
@@ -1011,6 +993,9 @@ img {
   .home__blob {
     width: 240px;
   }
+  .home__social {
+    font-size: 24px;
+  }
 
   .home__scroll {
     display: block;
@@ -1042,32 +1027,6 @@ img {
   }
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-  .qualification__data {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-    text-align: center;
-  }
-
-  .qualification__data > div:nth-child(2) {
-    justify-self: center;
-  }
-
-  .qualification__rounder,
-  .qualification__line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .qualification__line {
-    transform: none;
-    height: 40px;
-  }
-
-  .qualification__title,
-  .qualification__subtitle,
-  .qualification__calender {
-    text-align: center;
   }
 
   .qualification__tabs {
@@ -1154,6 +1113,7 @@ img {
 
   .home__social {
     transform: translateX(-6rem);
+    font-size: 22px;
   }
 
   .button--white {
