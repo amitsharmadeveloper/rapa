@@ -482,7 +482,9 @@ img {
 }
 
 /*==================== Qualifications ====================*/
-
+.qualification__sections{
+  width:80vw;
+}
 .qualification__tabs {
   display: flex;
   justify-content: space-evenly;
