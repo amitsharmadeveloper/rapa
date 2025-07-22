@@ -1161,7 +1161,7 @@ img {
 }
 
 
-/* Qualification Timeline: Fix Mobile Vertical View with Proper Line & Dots */
+/*x Qualification Timeline: Fix Mobile Vertical View with Proper Line & Dots */
 @media screen and (max-width: 768px) {
   .qualification__sections {
     display: flex;
@@ -1171,28 +1171,28 @@ img {
 
   .qualification__data {
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    padding: 1.2rem 0;
     position: relative;
-    padding: 1rem 0;
-  }
-
-  .qualification__data:nth-child(even) {
-    flex-direction: row-reverse;
   }
 
   .qualification__data > div:first-child {
-    width: 100%;
-    padding: 0 1rem;
+    width: 45%;
+    text-align: right;
   }
 
-  .qualification__data > div:nth-child(2) {
+  .qualification__data:nth-child(even) > div:first-child {
+    text-align: left;
+  }
+
+  .qualification__data > div:last-child {
+    position: relative;
+    width: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    min-width: 30px;
   }
 
   .qualification__rounder {
@@ -1207,7 +1207,6 @@ img {
     width: 2px;
     height: 100%;
     background-color: var(--first-color);
-    display: block;
     position: absolute;
     top: 12px;
     left: 50%;
@@ -1217,11 +1216,13 @@ img {
 
   .qualification__title {
     font-size: 1rem;
+    font-weight: 600;
   }
 
   .qualification__subtitle,
   .qualification__calendar {
     font-size: 0.85rem;
+    color: var(--text-color-light);
   }
 
   .qualification__calendar i {
