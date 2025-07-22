@@ -1160,7 +1160,8 @@ img {
 
 }
 
-/* Qualification Timeline: Maintain Zig-Zag on Mobile */
+
+/* Qualification Timeline: Fix Mobile Vertical View with Proper Line & Dots */
 @media screen and (max-width: 768px) {
   .qualification__sections {
     display: flex;
@@ -1169,21 +1170,29 @@ img {
   }
 
   .qualification__data {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    position: relative;
+    display: flex;
+    align-items: flex-start;
     width: 100%;
+    position: relative;
     padding: 1rem 0;
   }
 
-  /* Make sure the timeline rounder and line stay centered */
-  .qualification__data div:nth-child(2) {
+  .qualification__data:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .qualification__data > div:first-child {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .qualification__data > div:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 1rem;
+    justify-content: flex-start;
+    position: relative;
+    min-width: 30px;
   }
 
   .qualification__rounder {
@@ -1191,7 +1200,6 @@ img {
     height: 12px;
     background-color: var(--first-color);
     border-radius: 50%;
-    position: relative;
     z-index: 1;
   }
 
@@ -1200,9 +1208,13 @@ img {
     height: 100%;
     background-color: var(--first-color);
     display: block;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
   }
 
-  /* Adjust content spacing */
   .qualification__title {
     font-size: 1rem;
   }
